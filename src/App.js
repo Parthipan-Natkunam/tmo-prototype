@@ -1,15 +1,12 @@
-import { Navbar, Card } from "./components";
+import { Navbar } from "./components";
+import Routes from "./Routes";
 
 function App() {
   return (
     <>
       <Navbar brandName="Hypocrites" />
       <div className="px-3">
-        {Array(8)
-          .fill(1)
-          .map((_, index) => (
-            <Card key={index} />
-          ))}
+        <Routes />
       </div>
     </>
   );

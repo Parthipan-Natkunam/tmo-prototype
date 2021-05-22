@@ -1,7 +1,18 @@
-import "./App.css";
+import { Navbar, Card } from "./components";
 
 function App() {
-  return <button class="btn btn-primary">DaisyUI Button</button>;
+  return (
+    <>
+      <Navbar brandName="Hypocrites" />
+      <div className="px-3">
+        {Array(8)
+          .fill(1)
+          .map((_, index) => (
+            <Card key={index} />
+          ))}
+      </div>
+    </>
+  );
 }
 
 export default App;
